@@ -56,45 +56,80 @@ git clone <远程库地址>
 
 ## git上传文件到github
 
-在本地准备好文件，将它们上传到 GitHub。
+使用http链接
 
-1. 初始化本地仓库
+1. 进入希望希望克隆仓库的目录
+
+2. 运行命令克隆仓库
 
    ```bash
-   git init
+   git clone https://github.com....
    ```
-   
- 2. 关联远程库地址
 
-    ```bash
-    git remote add origin <远程库地址>
-    ```
+3. 如果仓库是私有的，Git 会提示你输入 GitHub 的用户名和密码。在输入密码时，GitHub 现在要求使用 **Personal Access Token**（而不是直接的账户密码）。你可以在 GitHub 设置中生成一个 Token。
 
-    例如：
-
-    ```bash
-    git remote add origin ssh://sys.....
-    ```
-
-3. 添加文件并提交更改
-
-   确认本地的文件已添加并提交：
+4. 复制文件到本地仓库
 
    ```bash
-   git add .
+   cp "被要复制的文件地址" "克隆的库地址"
+   ```
+
+5. 进入克隆的仓库
+
+6. 存入暂存区
+
+   ```bash
+   git add 文件名.后缀名
+   ```
+
+7. 提交更改
+
+   ```bash
    git commit -m "添加说明"
    ```
 
-  4. 推送到远程库
+8. 推送到GitHub库
 
-     将本地提交推送到远程库：
+   ```bash
+   git push origin main
+   ```
 
-     ```bash
-      git push -u origin <分支名>  # 一般是 main 或 master 分支
-     ```
+如果更新了怎么办
 
-     第一次推送时，可以使用 `-u` 选项来设置默认的上游分支，以后可以直接用 `git push` 推送到该分支。
+1. 进入克隆仓库目录
 
-  5. 检查推送情况
+2. 检查文件更改
 
-     推送完成后，可以在远程仓库中查看是否成功上传了文件。
+   ```bash
+   git status
+   ```
+
+3. 添加到暂存区
+
+   ```bash
+   git add filename.md
+   ```
+
+   如果有多个更改文件，可以使用 `.` 添加所有更改：
+
+   ```bash
+   git add .
+   ```
+
+4. 提交更改
+
+   ```bash
+   git commit -m "更新说明"
+   ```
+
+5. 推送到远程库
+
+   ```bash
+   git push origin main
+   
+   
+   使用 master 分支：
+   git push origin master
+   ```
+
+   
