@@ -56,7 +56,7 @@ git clone <远程库地址>
 
 ## git上传文件到github
 
-使用http链接
+**使用http链接**
 
 1. 进入希望希望克隆仓库的目录
 
@@ -94,7 +94,7 @@ git clone <远程库地址>
    git push origin main
    ```
 
-如果更新了怎么办
+**如果更新了怎么办**
 
 1. 进入克隆仓库目录
 
