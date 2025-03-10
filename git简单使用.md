@@ -131,5 +131,12 @@ git clone <远程库地址>
    使用 master 分支：
    git push origin master
    ```
-
+6. 修改特定仓库的作者信息
+   ```bash
+   cd 仓库目录
+   git config user.name "新用户名"
+   git config user.email "新邮箱"
+   ```
+7. 创建隔离分支
+     
    
